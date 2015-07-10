@@ -8,5 +8,4 @@ ENV SPARK_URL "http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-1.3
 
 ADD $SPARK_URL /
 RUN tar -xvf $SPARK_FILE
-RUN rm /var/lib/spark
 RUN ln -s $SPARK_PATH /var/lib/spark
