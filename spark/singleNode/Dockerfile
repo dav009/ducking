@@ -10,3 +10,5 @@ ENV SPARK_URL "http://mirror2.shellbot.com/apache/spark/spark-${SPARK_VERSION}/$
 ADD $SPARK_URL /
 RUN tar -xvf $SPARK_FILE
 RUN ln -s $SPARK_PATH /var/lib/spark
+
+RUN apt-get install -y python
