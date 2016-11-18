@@ -12,4 +12,4 @@ RUN tar -xvf $SPARK_FILE
 RUN ln -s $SPARK_PATH /var/lib/spark
 
 RUN apt-get install -y python
-RUN apt-get install python-pip 
+RUN apt-get install -y python-pip 
