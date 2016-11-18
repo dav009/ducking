@@ -1,10 +1,11 @@
 FROM dav009/java-7
-MAINTAINER David Przybilla <david.przybilla@idioplatform.com>
+MAINTAINER David Przybilla <dav.alejandro@gmail.com>
 
-ENV SPARK_VERSION "1.3.1"
-ENV SPARK_PATH "/spark-${SPARK_VERSION}-bin-hadoop2.4"
-ENV SPARK_FILE "spark-${SPARK_VERSION}-bin-hadoop2.4.tgz"
-ENV SPARK_URL "http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-1.3.1/${SPARK_FILE}"
+ENV SPARK_VERSION "2.0.2"
+ENV SPARK_PATH "/spark-${SPARK_VERSION}-bin-hadoop2.7"
+ENV SPARK_FILE "spark-${SPARK_VERSION}-bin-hadoop2.7.tgz"
+
+ENV SPARK_URL "http://mirror2.shellbot.com/apache/spark/spark-${SPARK_VERSION}/${SPARK_FILE}"
 
 ADD $SPARK_URL /
 RUN tar -xvf $SPARK_FILE
